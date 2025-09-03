@@ -10,6 +10,7 @@ st.set_page_config(
     layout="wide",
 )
 st.title("Weather or Not")
+
 stats_col, map_col = st.columns([1, 3])
 
 # Check for session state updates before overriding
@@ -36,7 +37,7 @@ for marker in st.session_state["markers"]:
 
 # Display the map only once
 with map_col:
-    map_data = st_folium(m)
+    map_data = st_folium(m, height='700', width='1400')
 
 # Handle click events
 if map_data.get("last_clicked"):
