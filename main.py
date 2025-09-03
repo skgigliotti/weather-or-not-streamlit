@@ -4,6 +4,25 @@ import streamlit as st
 
 from weather_stats import Location
 
+custom_footer = """
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    margin: 5px;
+    font-size: 14px;
+}
+</style>
+<div class="footer">
+    <p>©2025 Sophia Gigliotti</p>
+</div>
+"""
+st.markdown(custom_footer, unsafe_allow_html=True)
+
 st.set_page_config(
     page_title="Weather or Not",
     page_icon="images/favicon.png",
