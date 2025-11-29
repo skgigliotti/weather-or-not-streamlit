@@ -53,7 +53,6 @@ if map_data.get("last_clicked"):
     💧    {str(round(location.precipitation_probability))}%\n
     🍃    {str(round(location.wind_speed))}mph\n
     ☀️    {str(round(location.uv_index, 2))}
-
     """
     st.session_state['info_text'] = stats_str
     
